@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: axe-scan-ingestion-service
+  threads:
+    virtual:
+      enabled: true
+
+  jpa:
+    open-in-view: false
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 50
+        order_inserts: true
+        order_updates: true
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
