@@ -16,6 +16,5 @@ public record AxeScanTargetDto(
         @NotNull(message = "timestamp must not be null")
         Instant timestamp,
 
-        @Valid
-        List<AxeRuleDto> violations
+        List<@Valid AxeRuleDto> violations
 ) {}

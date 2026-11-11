@@ -14,6 +14,6 @@ public record AxeScanIngestionRequest(
         String initiatedBy,
 
         @NotEmpty(message = "targets list must contain at least one scan target")
-        @Valid
-        List<AxeScanTargetDto> targets
+
+        List<@Valid AxeScanTargetDto> targets
 ) {}
